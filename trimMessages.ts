@@ -19,10 +19,10 @@ const llm = new ChatGoogleGenerativeAI({
 });
 
 const trimmer = trimMessages({
-  maxTokens: 10,
+  maxTokens: 15,
   strategy: "last",
   tokenCounter: (msgs) => msgs.length,
-  includeSystem: true,
+  includeSystem: false,
   allowPartial: false,
   startOn: "human",
 });
@@ -42,10 +42,10 @@ const messages = [
 ];
 
 const promptTemplate2 = ChatPromptTemplate.fromMessages([
-  [
-    "system",
-    "You are a helpful assistant. Answer all questions to the best of your ability in {language}.",
-  ],
+  // [
+  //   "system",
+  //   "You are a helpful assistant. Answer all questions to the best of your ability in {language}.",
+  // ],
   ["placeholder", "{messages}"],
 ]);
 
