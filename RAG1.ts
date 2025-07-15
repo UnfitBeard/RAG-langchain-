@@ -227,3 +227,4 @@ for await (const chunk of await graphQA.stream(inputsQA, {
     console.log(chunk);
     console.log("\n====\n");
 }
+
